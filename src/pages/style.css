@@ -1,0 +1,670 @@
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+/*
+Copyright (c) 2025 Vanixy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+/* ====== MAIN STYLE ====== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff4e50, #4b1e1f); /* Tema rosso */
+    color: #fff;
+    text-align: center;
+}
+/* ====== MAIN WEBISTE ====== */
+
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px; /* Compensazione per la navbar */
+    padding: 50px 20px;
+    min-height: calc(100vh - 80px); /* Altezza dinamica per riempire lo schermo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h1 .highlight {
+    color: #ffd700;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.hero .button {
+    padding: 15px 30px;
+    background: #e43e3e;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s;
+}
+
+.hero .button:hover {
+    background: #c12d2d;
+}
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+
+/* ====== LOGIN  ====== */
+
+
+/* Login Form (login.php) */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg') no-repeat center center/cover;
+    background-size: cover;
+    position: relative;
+}
+
+/* Overlay Scuro per Migliorare Contrasto */
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscuramento leggero */
+    z-index: 1;
+}
+
+/* Stile del Form */
+form.login-form {
+    background: rgba(255, 255, 255, 0.2); /* Sfondo traslucido */
+    backdrop-filter: blur(10px); /* Effetto sfocato */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    z-index: 2; /* Assicura che sia sopra l'overlay */
+}
+
+/* Titolo del Form */
+form.login-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffd700; /* Colore dorato per evidenziare il titolo */
+}
+
+/* Input Fields */
+form.login-form input[type="text"],
+form.login-form input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+form.login-form input::placeholder {
+    color: #ddd;
+}
+
+/* Bottone di Login */
+.login-button {
+    padding: 15px;
+    width: 100%;
+    background: #e43e3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background: #c12d2d;
+    transform: scale(1.05);
+}
+
+/* Miglioramenti Responsività */
+@media (max-width: 768px) {
+    form.login-form {
+        padding: 30px;
+    }
+
+    form.login-form h2 {
+        font-size: 24px;
+    }
+
+    form.login-form input[type="text"],
+    form.login-form input[type="password"] {
+        padding: 12px;
+    }
+
+    .login-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+
+/* ====== DASHBOARD PANEL ====== */
+.panel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg') no-repeat center center/cover;
+    background-size: cover;
+    position: relative;
+}
+.home-button {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.home-button:hover {
+    color: #ffd700; /* Dorato quando passa il mouse */
+}
+
+/* Overlay Scuro per Migliorare Contrasto */
+.panel-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscuramento leggero */
+    z-index: 1;
+}
+
+/* Stile del Pannello */
+.panel {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7); /* Sfondo scuro per maggiore leggibilità */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+    color: white;
+}
+
+/* Testo nel Pannello */
+.panel h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.panel p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* ====== SEZIONE SERVIZIO ATTIVO ====== */
+.panel .service-details {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.panel .service-details h3 {
+    font-size: 20px;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.panel .service-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.panel .service-details ul li {
+    font-size: 14px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+/* ====== PULSANTI AZIONE ====== */
+.panel .action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.panel .action-buttons .update-button,
+.panel .action-buttons .delete-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    width: 48%;
+    color: white;
+}
+
+/* Pulsante Aggiorna */
+.panel .action-buttons .update-button {
+    background: #4caf50;
+}
+
+.panel .action-buttons .update-button:hover {
+    background: #45a045;
+    transform: scale(1.05);
+}
+
+/* Pulsante Cancella */
+.panel .action-buttons .delete-button {
+    background: #e43e3e;
+}
+
+.panel .action-buttons .delete-button:hover {
+    background: #c12d2d;
+    transform: scale(1.05);
+}
+
+/* ====== LOGOUT BUTTON ====== */
+.logout-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: #ff4e50;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #e43e3e;
+    transform: scale(1.05);
+}
+
+/* ====== RESPONSIVITÀ ====== */
+@media (max-width: 768px) {
+    .panel .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .panel .action-buttons .update-button,
+    .panel .action-buttons .delete-button {
+        width: 100%;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+
+
+/* ====== HOSTING PLANS  ====== */
+.plans {
+    padding: 40px 20px;
+    background: #4b1e1f; /* Sfondo scuro rosso */
+    color: #fff;
+    text-align: center;
+}
+
+.plans h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.plans .subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #d97777; /* Rosso chiaro */
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Consente di adattarsi su più righe */
+}
+
+.plan {
+    background: #1f0d0d; /* Sfondo delle card */
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px; /* Larghezza fissa per le card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #fff;
+    text-align: left;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+.plan h4 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.plan .status {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.plan .status.unavailable {
+    color: #ff4e50; /* Rosso */
+    font-weight: bold;
+}
+
+.plan .price {
+    font-size: 28px;
+    color: #e43e3e;
+    margin-bottom: 20px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.plan ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.plan ul li strong {
+    color: #fff;
+}
+
+.plan .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #e43e3e; /* Colore pulsante */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.plan .button:hover {
+    background: #c12d2d; /* Hover del pulsante */
+    transform: scale(1.05);
+}   
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+
+
+/* ====== CHI SIAMO ====== */
+.about {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1); /* Sfondo semi-trasparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 800px; /* Centrato con larghezza massima */
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    color: #ffd700; /* Colore oro per il titolo */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+    margin: 0 auto;
+    max-width: 700px;
+}
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+
+
+/* ====== I NOSTRI SERVIZI ====== */
+.services {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto;
+    max-width: 1200px; /* Larghezza massima */
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Adatta le card su più righe */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px; /* Dimensione fissa delle card */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #ffd700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.logout-button:hover {
+    background: #c12d2d;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-cards, .plan-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card, .plan {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
+/* ======= STILE PAGINA REDIRECT ======= */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #1f1f1f, #3a3a3a); /* Sfondo sfumato scuro */
+    color: white;
+    text-align: center;
+}
+
+/* Box centrale */
+.rendirect {
+    background: rgba(255, 255, 255, 0.1); /* Sfondo traslucido */
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animazione fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Stile dell'header */
+.rendirect h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+/* Stile del paragrafo */
+.rendirect p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Stile del link */
+.rendirect a {
+    color: #ffd700; /* Dorato */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.rendirect a:hover {
+    color: #ff4e50;
+}
+
+/* Effetto animato sui puntini di "Redirecting..." */
+.rendirect h1::after {
+    content: "";
+    display: inline-block;
+    animation: dots 1.5s infinite steps(3);
+}
+
+@keyframes dots {
+    0% { content: "."; }
+    33% { content: ".."; }
+    66% { content: "..."; }
+    100% { content: ""; }
+}
