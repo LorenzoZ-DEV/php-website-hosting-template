@@ -24,11 +24,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($password !== $confirm_password) {
         $error = "Le password non coincidono. Riprova.";
     } else {
-        // Verifica se il nome utente esiste già
         $stmt = $conn->prepare("SELECT id FROM users WHERE username = ?");
-        $stmt->bind_param("s", $username);
+        try {
+            $stmt->bind_param("s", $username);
+        } catch (Exception $e) {
+            $error = "Errore durante la verifica del nome utente: " . $e->getMessage();
+        }
         $stmt->execute();
         $stmt->store_result();
+    
 
         if ($stmt->num_rows > 0) {
             $error = "Nome utente già esistente. Scegli un altro nome utente.";

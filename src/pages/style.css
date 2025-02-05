@@ -219,6 +219,114 @@ form.login-form input::placeholder {
     position: relative;
 }
 
+/* Overlay Scuro per Migliorare Contrasto */
+.register-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscuramento leggero */
+    z-index: 1;
+}
+
+/* Stile del Form */
+form.register-form {
+    background: rgba(255, 255, 255, 0.2); /* Sfondo traslucido */
+    backdrop-filter: blur(10px); /* Effetto sfocato */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    z-index: 2; /* Assicura che sia sopra l'overlay */
+}
+
+/* Titolo del Form */
+form.register-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffd700; /* Colore dorato per evidenziare il titolo */
+}
+
+/* Input Fields */
+form.register-form input[type="text"],
+form.register-form input[type="password"],
+form.register-form input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+form.register-form input::placeholder {
+    color: #ddd;
+}
+
+/* Bottone di Registrazione */
+.register-button {
+    padding: 15px;
+    width: 100%;
+    background: #e43e3e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.register-button:hover {
+    background: #c12d2d;
+    transform: scale(1.05);
+}
+
+/* Link di Navigazione */
+.register-form .home-button,
+.register-form .login-button {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-form .home-button:hover,
+.register-form .login-button:hover {
+    color: #ffd700; /* Dorato quando passa il mouse */
+}
+
+/* Miglioramenti Responsività */
+@media (max-width: 768px) {
+    form.register-form {
+        padding: 30px;
+    }
+
+    form.register-form h2 {
+        font-size: 24px;
+    }
+
+    form.register-form input[type="text"],
+    form.register-form input[type="password"] {
+        padding: 12px;
+    }
+
+    .register-button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
 /* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════*/
 
 /* ====== DASHBOARD PANEL ====== */
