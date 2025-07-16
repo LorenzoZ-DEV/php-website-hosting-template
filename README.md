@@ -1,41 +1,60 @@
-# php-website-hosting-template
- This project is made by for a Class Homework for School 
+<h1 align="center">🚀 Vlessy Hosting Panel</h1>
+<p align="center">
+  <i>php-website-hosting-template — Progetto scolastico</i><br>
+  <strong>Pannello di gestione hosting moderno, minimale e completamente responsive</strong>
+</p>
 
-# Vlessy Hosting Panel
-🚀 Pannello di gestione hosting e login system completamente responsive, con un design moderno e minimale.
+<hr>
 
-# 📌 Descrizione del progetto
-Vlessy Hosting Panel è un sistema web che offre un'interfaccia intuitiva per la gestione dei servizi di hosting, VPS e server dedicati.
-Include una pagina di login, un pannello utente, un sistema di reindirizzamento automatico e una pagina di gestione servizi con funzionalità di aggiornamento e cancellazione.
+<h2>📌 Descrizione del progetto</h2>
+<p>
+Vlessy Hosting Panel è un sistema web pensato per offrire un'interfaccia semplice ed elegante per la gestione di servizi hosting, VPS e server dedicati.
+Include:
+</p>
+<ul>
+  <li>Pagina di login con autenticazione</li>
+  <li>Dashboard utente</li>
+  <li>Reindirizzamento automatico alla homepage</li>
+  <li>Gestione servizi: aggiornamento e cancellazione</li>
+</ul>
+<p>
+Il tutto con un design dark moderno, effetti blur, animazioni fluide e compatibilità completa con dispositivi mobili.
+</p>
 
-Il design è moderno, con effetti di blur e trasparenze, un'interfaccia scura accattivante e animazioni fluide.
+<h2>🎯 Funzionalità principali</h2>
+<ul>
+  <li>✅ Pagina di Login con autenticazione</li>
+  <li>✅ Dashboard utente con dettagli sui servizi</li>
+  <li>✅ Sistema di reindirizzamento automatico</li>
+  <li>✅ Gestione Servizi: Aggiorna o Cancella</li>
+  <li>✅ Design responsive per desktop e mobile</li>
+  <li>✅ Effetti di Blur e Trasparenza</li>
+  <li>✅ Licenza MIT – Completamente Open Source</li>
+</ul>
 
-# 🎯 Funzionalità principali
-✅ Pagina di Login con autenticazione degli utenti
-✅ Pannello Utente (Dashboard) con dettagli sui servizi attivi
-✅ Sistema di Reindirizzamento automatico alla pagina principale
-✅ Gestione Servizi: Aggiorna o Cancella il servizio attivo
-✅ Design responsive e ottimizzato per desktop e mobile
-✅ Effetti di Blur e Trasparenza per un look moderno
-✅ Licenza MIT – Completamente Open Source
+<h2>⚙️ Tecnologie utilizzate</h2>
+<ul>
+   <img alt="HTML" src="https://skillicons.dev/icons?i=html,css,js,php,mysql">
+</ul>
 
+<h2>🚀 Installazione</h2>
+<ol>
+  <li><strong>Clona il repository</strong><br><code>git clone https://github.com/tuo-utente/php-website-hosting-template</code></li>
+  <li><strong>Configura l'ambiente</strong><br>Assicurati di avere <code>XAMPP</code> o <code>WAMP</code> installato.<br>Sposta i file nella cartella <code>htdocs</code> o nella root del tuo web server.</li>
+  <li><strong>Avvia il progetto</strong><br>
+    <ul>
+      <li>🧑‍💻 <code>Username: admin</code></li>
+      <li>🔑 <code>Password: admin</code></li>
+    </ul>
+    <i>(Puoi modificare gli utenti all'interno del file <code>login.php</code>)</i>
+  </li>
+</ol>
 
-# ⚙️ Tecnologie utilizzate
-🔹 HTML5 – Struttura della pagina
-🔹 CSS3 – Design e animazioni avanzate
-🔹 JavaScript – Effetti interattivi e reindirizzamento
-🔹 PHP – Backend per gestione utenti e login
-🔹 MySQL (Opzionale) – Per la gestione dei dati utente (può essere integrato successivamente)
+<hr>
 
-# 🚀 Installazione
-1️⃣ Clona il repository
-2️⃣ Configura il server locale
-Assicurati di avere un server Apache + PHP installato (come XAMPP o WAMP).
-Sposta i file nella cartella htdocs (per XAMPP) o nella root del tuo server.
-
-# 3️⃣ Avvia il progetto
-Per accedere al Pannello Utente, usa:
-🧑‍💻 Username: admin
-🔑 Password: admin
-
-(Puoi modificare gli utenti nel file login.php)
+<p align="center">
+  <br><br>
+  <img alt="IntelliJ IDEA" src="https://img.shields.io/badge/-IntelliJ%20IDEA-black?style=for-the-badge&logo=intellij-idea&logoColor=white">
+  <img alt="XAMPP" src="https://img.shields.io/badge/-XAMPP-orange?style=for-the-badge&logo=xampp&logoColor=white">
+  <img alt="Arch Linux" src="https://img.shields.io/badge/-Arch%20Linux-blue?style=for-the-badge&logo=arch-linux&logoColor=white">
+</p>
