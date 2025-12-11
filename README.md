@@ -1,7 +1,6 @@
 <table align="center">
   <tr>
     <td style="vertical-align: middle;">
-      <img src="https://media1.tenor.com/m/q5VUIYMFMiUAAAAC/work-out.gif" width="350" alt="Hosting Animation">
     </td>
     <td style="padding-left: 20px; vertical-align: middle;">
       <samp>
